@@ -1,0 +1,193 @@
+<html> 
+<head> 
+<link href="asset/css/style.css" rel="stylesheet"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style> 
+body { 
+  margin: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
+} 
+ 
+.topnav { 
+  overflow: hidden; 
+  background-color: purple; 
+} 
+ 
+.topnav a { 
+  float: left; 
+  color: white; 
+  text-align: center; 
+  padding: 14px 75px; 
+  text-decoration: none; 
+  font-size: 17px; 
+} 
+ 
+.topnav a:hover { 
+  background-color: #ddd; 
+  color: black; 
+} 
+ 
+.topnav a.active { 
+  background-color: pink; 
+  color: black; 
+} 
+</style> 
+</head>
+
+<body> 
+ 
+<div class="topnav"> 
+  <a class="active" href="index.html">Home</a> 
+  <a href="Biodata.html">Biodata</a> 
+  <a href="Experience.html">Experience</a> 
+  <a href="Education.html">Education</a> 
+  <a href="Family.html">Family</a> 
+  <a href="Gallery.html">Gallery</a> 
+</div> 
+
+
+
+
+<br> 
+<div class="bg"></div> 
+ 
+<div style="padding-left:16px"> 
+	<marquee width="100%" direction="right" height="100px" scrollamount="20" size font="60px"><b>
+		<h1> WELCOME TO MY WEBPAGE!! </h1>
+	</b></marquee> 
+
+	<br>
+
+	<marquee width="100%" direction="right" height="100px" scrollamount="20" size font="60px"><b>
+		<h2> SAFIAH MARDIAH BINTI ABD MALEK <h2> 
+	</b></marquee>  
+	<br>
+</div> 
+ 
+
+
+<h1><center> My Interest </h1>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="asset/image/atr1.jpg" style="width:100%">
+  <div class="text">After The Rain</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="asset/image/atr2.jpg" style="width:100%">
+  <div class="text">Mafumafu</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="asset/image/atr3.jpg" style="width:100%">
+  <div class="text">Soraru</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+<body>
+<center>
+    <div id="clock">8:10:45</div>
+ 
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+ 
+            if (hour > 12) {
+                hour -= 12;
+                am_pm = "PM";
+            }
+            if (hour == 0) {
+                hr = 12;
+                am_pm = "AM";
+            }
+ 
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+ 
+            let currentTime = hour + ":"
+                + min + ":" + sec + am_pm;
+ 
+            document.getElementById("clock")
+                .innerHTML = currentTime;
+        }
+ 
+        showTime();
+    </script>
+</body> 
+
+
+
+
+<br><br>
+
+
+
+<center> <audio controls autoplay mute>
+  <source src="asset/audio/KING GNU MAFUMAFU.mp3" type="audio/mp3">
+</audio>
+
+
+
+
+<br><br>
+<center>
+	<a href="https://www.youtube.com/watch?v=aUfbpg_yRK8" target="_blank"><u> KING GNU BY MAFUMAFU
+	</u></a>
+
+<br><br>
+
+
+</body> 
+</html>
